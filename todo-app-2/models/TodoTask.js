@@ -1,5 +1,7 @@
-const mongoose = require('mongoose')
-;
+// mongoose connects our site to mongoDB
+const mongoose = require('mongoose');
+
+// describe how we want to store todo item
 const todoTaskSchema = new mongoose.Schema({
   content: {
     type: String,
@@ -11,4 +13,5 @@ const todoTaskSchema = new mongoose.Schema({
   }
 })
 
+// export schema
 module.exports = mongoose.model('TodoTask',todoTaskSchema);
