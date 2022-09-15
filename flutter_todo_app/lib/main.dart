@@ -12,9 +12,9 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await DatabaseProvider.initDb();
   await GetStorage.init();
-  await ScreenUtil.ensureScreenSize();
+  // await ScreenUtil.ensureScreenSize();
 
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  // SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
   runApp(
     MyApp(),
   );
