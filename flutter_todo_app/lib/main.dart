@@ -1,47 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_todo_app/constants/theme.dart';
-import 'package:flutter_todo_app/controllers/theme_controller.dart';
-import 'package:flutter_todo_app/providers/database_provider.dart';
-import 'package:flutter_todo_app/views/screens/home_screen.dart';
-import 'package:get/get.dart';
-import 'package:get_storage/get_storage.dart';
+import './screens/home.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await DatabaseProvider.initDb();
-  await GetStorage.init();
-  // await ScreenUtil.ensureScreenSize();
-
-  // SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-  runApp(
-    MyApp(),
-  );
+void main() {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  MyApp({Key? key}) : super(key: key);
+  const MyApp({Key? key}) : super(key: key);
 
-  final ThemeController _themeController = Get.put(ThemeController());
-
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: const Size(360, 690),
-      minTextAdapt: true,
-      splitScreenMode: true,
-      builder: (context, child) {
-        return GetMaterialApp(
-          debugShowCheckedModeBanner: false,
-          title: 'Flutter TODO App',
-          theme: Themes.lightTheme,
-          themeMode: _themeController.theme,
-          darkTheme: Themes.darkTheme,
-          home: child,
-        );
-      },
-      child: HomeScreen(),
+    SystemChrome.setSystemUIOverlayStyle(
+        SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'ToDo App',
+      home: Home(),
     );
   }
 }
