@@ -1,9 +1,11 @@
-import 'package:flutter/material.dart';
+// import necessary packages
 
+import 'package:flutter/material.dart';
 import '../model/todo.dart';
 import '../constants/colors.dart';
 import '../widgets/todo_item.dart';
 
+// add class Home to app
 class Home extends StatefulWidget {
   Home({Key? key}) : super(key: key);
 
@@ -11,7 +13,9 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
+// add class HomeState
 class _HomeState extends State<Home> {
+  // create todosList
   final todosList = ToDo.todoList();
   List<ToDo> _foundToDo = [];
   final _todoController = TextEditingController();
@@ -22,12 +26,15 @@ class _HomeState extends State<Home> {
     super.initState();
   }
 
+  // build container for todos
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // set background color
       backgroundColor: tdBGColor,
       appBar: _buildAppBar(),
       body: Stack(
+        // create containers and set padding for todos
         children: [
           Container(
             padding: EdgeInsets.symmetric(
@@ -53,6 +60,7 @@ class _HomeState extends State<Home> {
                           ),
                         ),
                       ),
+                      // iterate backwards over todos and insert to app
                       for (ToDo todoo in _foundToDo.reversed)
                         ToDoItem(
                           todo: todoo,
@@ -65,6 +73,7 @@ class _HomeState extends State<Home> {
               ],
             ),
           ),
+          // set alignment
           Align(
             alignment: Alignment.bottomCenter,
             child: Row(children: [
@@ -128,18 +137,21 @@ class _HomeState extends State<Home> {
     );
   }
 
+  // handle change of todo checked
   void _handleToDoChange(ToDo todo) {
     setState(() {
       todo.isDone = !todo.isDone;
     });
   }
 
+  // delete todo
   void _deleteToDoItem(String id) {
     setState(() {
       todosList.removeWhere((item) => item.id == id);
     });
   }
 
+  // add todo item
   void _addToDoItem(String toDo) {
     setState(() {
       todosList.add(ToDo(
@@ -150,6 +162,7 @@ class _HomeState extends State<Home> {
     _todoController.clear();
   }
 
+  // filtering todos
   void _runFilter(String enteredKeyword) {
     List<ToDo> results = [];
     if (enteredKeyword.isEmpty) {
@@ -167,6 +180,7 @@ class _HomeState extends State<Home> {
     });
   }
 
+  // create searchBox widget for searching
   Widget searchBox() {
     return Container(
       padding: EdgeInsets.symmetric(horizontal: 15),
@@ -195,6 +209,7 @@ class _HomeState extends State<Home> {
     );
   }
 
+  // create app bar widget, top of screen
   AppBar _buildAppBar() {
     return AppBar(
       backgroundColor: tdBGColor,

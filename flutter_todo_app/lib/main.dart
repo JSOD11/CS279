@@ -6,16 +6,19 @@ void main() {
   runApp(const MyApp());
 }
 
+// creates app
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  // This widget is the root of the application
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle(statusBarColor: Colors.transparent));
+    // creates app
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      //set title
       title: 'ToDo App',
       home: Home(),
     );

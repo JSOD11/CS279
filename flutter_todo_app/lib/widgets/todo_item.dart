@@ -1,13 +1,16 @@
-import 'package:flutter/material.dart';
+// import packages
 
+import 'package:flutter/material.dart';
 import '../model/todo.dart';
 import '../constants/colors.dart';
 
+// create todo item class for adding todos
 class ToDoItem extends StatelessWidget {
   final ToDo todo;
   final onToDoChanged;
   final onDeleteItem;
 
+  // create todo item
   const ToDoItem({
     Key? key,
     required this.todo,
@@ -15,9 +18,11 @@ class ToDoItem extends StatelessWidget {
     required this.onDeleteItem,
   }) : super(key: key);
 
+  // build todo widget
   @override
   Widget build(BuildContext context) {
     return Container(
+      // formatting
       margin: EdgeInsets.only(bottom: 20),
       child: ListTile(
         onTap: () {
