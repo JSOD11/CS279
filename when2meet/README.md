@@ -1,5 +1,5 @@
 # when2meet
-Justin O'Dwyer and Jothi Ramaswamy. This functioning when2meet application is based off of the when2meet designed by our classmate Daniel Schwartz @danielschwartz4 and uses the following library for the calendar functionality: https://www.npmjs.com/package/react-schedule-selector
+Justin O'Dwyer and Jothi Ramaswamy. This functioning when2meet application was built off of the when2meet clone designed by our classmate Daniel Schwartz (@danielschwartz4) and uses the following library for the calendar functionality: https://www.npmjs.com/package/react-schedule-selector
 
 # Usage
 
