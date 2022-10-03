@@ -1,7 +1,10 @@
+// import necessary modules
 import ScheduleSelector from 'react-schedule-selector';
 import { seed1, seed2, seed3 } from './seeds';
 
-// Hard coded schedules with opaque colors to accommodate for stacking
+// some schedules are already inputted into the when2meet
+
+// schedule 1
 export const Schedule1 = () => {
   return (
     <ScheduleSelector
@@ -18,6 +21,7 @@ export const Schedule1 = () => {
   );
 };
 
+// second schedule
 export const Schedule2 = () => {
   return (
     <ScheduleSelector
@@ -34,6 +38,7 @@ export const Schedule2 = () => {
   );
 };
 
+// third schedule
 export const Schedule3 = () => {
   return (
     <ScheduleSelector

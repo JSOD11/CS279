@@ -1,6 +1,6 @@
 import ScheduleSelector from 'react-schedule-selector';
 
-// Using ScheduleSelector library for faster development time
+// faster dev time enabled by scheduleSelector library
 const ScheduleSelectorComponent = ({ schedule, handleChange }) => {
   return (
     <ScheduleSelector

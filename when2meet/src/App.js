@@ -1,3 +1,4 @@
+// use chakra ui react
 import {
   Center,
   Box,
@@ -9,14 +10,13 @@ import {
 import React from 'react';
 import Dash from './components/Dash';
 
+// create app
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      {/* Title */}
-      {/* In this case, the Finance Bro is scheduling */}
       <Box>
         <Heading ml={24} mt={12} fontWeight={'light'}>
-          Meeting for our super important merger and acquisition 📈
+          CS 279R Meeting
         </Heading>
       </Box>
 
