@@ -1,8 +1,8 @@
-### Flask Todo App
+# Flask Todo App
 
 This is a simple todo app made using flask and python. The todo app is based off of the todo app contained in this repository: https://github.com/onurtacc/flask-todo-app
 
-#### Usage
+# Usage
 Clone the repository and then use your terminal to cd into the directory. We will now create a python3 virtual environment and activate it by running
 ```
 python3 -m venv venv
