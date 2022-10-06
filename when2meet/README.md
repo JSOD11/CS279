@@ -1,13 +1,26 @@
-How to use:
+# when2meet
+Justin O'Dwyer and Jothi Ramaswamy. This functioning when2meet application was built off of the when2meet clone designed by our classmate Daniel Schwartz (@danielschwartz4) and uses the following library for the calendar functionality: https://www.npmjs.com/package/react-schedule-selector
 
-1. Clone github repo
-2. run "yarn install" to install the node_modules
-3. run "yarn start" as defined in package.json
-4. Look other peoples' schedules on the right side
-5. Click and drag the left side to set you schedule
-6. Upon release, you should see the right side update with the correct shades of green
+# Usage
 
-I used javascript, React, and Chakra UI library because it's flexible, robust, and I've used it before
+Download zip file or clone the github repository, and then cd into the when2meet directory. Then execute the following in terminal
 
-I did not consult any external code, but I did use this library for the calendar: https://www.npmjs.com/package/react-schedule-selector
+```
+yarn install
+```
+
+followed by
+
+```
+npm install
+```
+Now run
+```
+yarn start
+```
+and you will see a functioning when2meet clone.
+
+# More Details
+
+This when2meet clone allows users to mark their availability on a shared calendar. Dragging is enabled, allowing a user to drag over blocks of time in which they are free. This application was built with javascript, react, and the chakra UI library.
 
