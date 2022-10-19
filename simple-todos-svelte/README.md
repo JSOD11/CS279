@@ -1,7 +1,5 @@
 # Todo App Built with Meteor and Svelte
 
-Source: 
-
 This is a todo app made using Svelte and Meteor. This todo app is based on the following repo: https://github.com/meteor/svelte-tutorial
 
 # Usage
