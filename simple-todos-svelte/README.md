@@ -12,7 +12,7 @@ meteor run
 
 After this, a local host link should appear in your terminal. Type that into your browser of choice to access the todo app.
 
-From here, you will be prompted to enter a username and password
+From here, if you are prompted to enter a username and password, then enter
 
 ### Username: meteorite
 ### Password: password
